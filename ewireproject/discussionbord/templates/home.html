@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+   Discussion Board
+{% endblock %}
+{% block title %}
+Discussion Board
+
+{% endblock %}
+
+{% block content %}
+<div style="backgroung-color:#D1F2EB">
+    <br>
+
+</div>
+<div>
+   <a href="{% url 'credentials:register' %}"><button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i> Register</button></a>
+</div>
+<div><img class="my-image my-image-padding" src="{% static 'images/banner3.jpg' %}" ></div>
+<div>
+    <br>
+    <br>
+    <br>
+</div>
+</div>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+<a href="{% url 'store:home' %}">Home Page</a>
+</div>
+
+{% endblock %}
